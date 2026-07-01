@@ -126,8 +126,124 @@
     .btn-reset:hover {
       border-color: #c0c4cc;
     }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 20px;
+      background: #f4f6f9;
+      font-family: "Microsoft Yahei", sans-serif;
+    }
+
+    .table-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    /* 表头样式 */
+    thead tr {
+      background-color: #409eff;
+      text-align: center;
+    }
+
+    th,
+    td {
+      padding: 14px 10px;
+      font-size: 14px;
+      border: none;
+    }
+
+    th {
+      font-weight: 500;
+    }
+
+    /* 表格行样式 */
+    tbody tr {
+      border-bottom: 1px solid #ebeef5;
+
+    }
+
+    /* 隔行变色 */
+    tbody tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+
+    /* 悬浮高亮 */
+    tbody tr:hover {
+      background-color: #ecf5ff;
+    }
+
+    /* 头像样式 */
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e4e7ed;
+    }
+
+    /* 操作按钮 */
+    .btn-edit {
+      padding: 6px 12px;
+      background: #67c23a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 6px;
+    }
+
+    .btn-del {
+      padding: 6px 12px;
+      background: #f56c6c;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-edit:hover {
+      background: #85ce61;
+    }
+
+    .btn-del:hover {
+      background: #f78989;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #999999;
+      /* 灰色背景 */
+      padding: 30px 0;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .copyright-text {
+      text-align: center;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 2.2;
+      letter-spacing: 2px;
+      /* 字间距提升大气感 */
+      font-family: "楷体";
+
+    }
   </style>
 </head>
+
 
 <body>
   <!-- 第一部分：导航栏 -->
@@ -172,6 +288,114 @@
       <button type="reset" class="btn-reset">清空</button>
     </div>
   </form>
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>头像</th>
+          <th>职位</th>
+          <th>入职日期</th>
+          <th>最后操作时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>令狐冲</td>
+          <td>男</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1025/44/44" alt="令狐冲头像"></td>
+          <td>讲师</td>
+          <td>2022-03-12</td>
+          <td>2026-06-28 14:32</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>任盈盈</td>
+          <td>女</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1027/44/44" alt="任盈盈头像"></td>
+          <td>咨询师</td>
+          <td>2022-05-08</td>
+          <td>2026-06-29 09:15</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>岳不群</td>
+          <td>男</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1074/44/44" alt="岳不群头像"></td>
+          <td>教研主管</td>
+          <td>2021-09-20</td>
+          <td>2026-06-25 16:47</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>林平之</td>
+          <td>男</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1033/44/44" alt="林平之头像"></td>
+          <td>班主任</td>
+          <td>2023-01-15</td>
+          <td>2026-06-20 11:08</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>仪琳</td>
+          <td>女</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1062/44/44" alt="仪琳头像"></td>
+          <td>学工主管</td>
+          <td>2022-07-03</td>
+          <td>2026-06-27 10:22</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>田伯光</td>
+          <td>男</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1011/44/44" alt="田伯光头像"></td>
+          <td>讲师</td>
+          <td>2023-04-26</td>
+          <td>2026-06-22 15:50</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+        <tr>
+          <td>左冷禅</td>
+          <td>男</td>
+          <td><img class="avatar" src="https://picsum.photos/id/1005/44/44" alt="左冷禅头像"></td>
+          <td>教研主管</td>
+          <td>2021-06-11</td>
+          <td>2026-06-18 08:36</td>
+          <td>
+            <button class="btn-edit">编辑</button>
+            <button class="btn-del">删除</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- 第四部分：版权页脚 -->
+  <footer>
+    <div class="copyright-text">
+      <div>刘明洋</div>
+      <div>削了腚的猫所著</div>
+    </div>
+  </footer>
 </body>
 
 </html>
